@@ -14,7 +14,7 @@ const AdminNavbar = () => {
 
  const handleLogout = () => {
   logout();
-  navigate("/login");
+  navigate("/");
  };
 
  return (
@@ -44,8 +44,8 @@ const AdminNavbar = () => {
      </Link>
     </div>
     <div className="flex items-center gap-5">
-     <span className="text-white font-bold text-sm">
-      Hi! <span className="font-semibold">{displayName}</span>
+     <span className="text-white font-bold text-m">
+      Hello, <span className="font-bold">{displayName}</span>
      </span>
      <button
       onClick={handleLogout}

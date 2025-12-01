@@ -30,10 +30,10 @@ const VoterNavbar = () => {
      </span>
     </div>
     <div className="flex items-center gap-8">
-     <span className="text-gray-700 font-bold">Hi!{displayName}</span>
+     <span className="text-gray-700 font-bold">Hello, {displayName}</span>
      <button
       onClick={handleLogout}
-      className="px-5 py-1.5 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition"
+      className="px-5 py-1.5 bg-indigo-600 text-white rounded cursor-pointer hover:bg-indigo-700 transition"
      >
       Logout
      </button>

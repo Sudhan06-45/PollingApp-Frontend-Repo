@@ -8,10 +8,8 @@ const Register = () => {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-
   const [showPass, setShowPass] = useState(false);
   const [showConfirmPass, setShowConfirmPass] = useState(false);
 
@@ -154,7 +152,7 @@ const Register = () => {
 
           <button
             type="submit"
-            className="w-full bg-black text-white py-2 rounded-lg text-lg font-medium hover:bg-gray-900 transition"
+            className="w-full bg-black text-white cursor-pointer py-2 rounded-lg text-lg font-medium hover:bg-gray-900 transition"
           >
             Register
           </button>

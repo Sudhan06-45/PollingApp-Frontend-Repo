@@ -26,7 +26,7 @@ const Home = () => {
           >
             <ChartBarIcon className="h-7 w-7 text-indigo-600" />
             <span className="text-xl font-bold text-gray-900">
-              Polling App
+              PollingApp
             </span>
           </div>
 
