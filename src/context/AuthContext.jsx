@@ -29,6 +29,7 @@ export function AuthProvider({ children }) {
     setLoading(false);
   },[]);
 
+  //login function
   const login = (jwt,userData)=> {
     if(!jwt || !userData) return;
 
@@ -39,6 +40,7 @@ export function AuthProvider({ children }) {
     localStorage.setItem("user",JSON.stringify(userData));
   };
 
+  //logout function
   const logout = ()=> {
     setToken(null);
     setUser(null);
@@ -47,6 +49,7 @@ export function AuthProvider({ children }) {
     localStorage.removeItem("user");
   };
 
+  //all the values provided by the context
   const globalAuth = {
     user,
     token,

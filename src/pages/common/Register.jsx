@@ -8,9 +8,11 @@ const Register = () => {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showPass, setShowPass] = useState(false);
+  
   const [showConfirmPass, setShowConfirmPass] = useState(false);
 
   const [errorMsg, setErrorMsg] = useState("");

@@ -139,7 +139,7 @@ const AdminCreatePoll = () => {
         </button>
 
         <button type="submit"
-          className="w-full mt-8 bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-lg text-lg font-semibold transition shadow">
+          className="w-full mt-8 bg-indigo-600 hover:bg-indigo-700 text-white cursor-pointer py-3 rounded-lg text-lg font-semibold transition shadow">
           Create Poll
         </button>
       </form>

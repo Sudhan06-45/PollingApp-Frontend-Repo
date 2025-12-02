@@ -38,7 +38,7 @@ const Vote = () => {
 
     } catch (err) {
       console.error("Vote error:", err);
-      setError("Already voted or error occurred");
+      setError("Already voted");
     }
   };
 
