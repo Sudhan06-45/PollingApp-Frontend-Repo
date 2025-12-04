@@ -12,7 +12,6 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showPass, setShowPass] = useState(false);
-  
   const [showConfirmPass, setShowConfirmPass] = useState(false);
 
   const [errorMsg, setErrorMsg] = useState("");
@@ -36,9 +35,8 @@ const Register = () => {
         role: "Voter",
       });
 
-      if (response.data && response.data.token) {
+      if (response.data?.token) {
         setSuccessMsg("Registered successfully! Redirecting to login...");
-
         setTimeout(() => navigate("/login"), 1500);
       }
     } catch (err) {
@@ -54,14 +52,12 @@ const Register = () => {
         <img
           src="https://storage.googleapis.com/fplswordpressblog/2022/07/online-voting.png"
           alt="login visual"
-          className="absolute inset-0 w-full h-full "
+          className="absolute inset-0 w-full h-full"
         />
-
         <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/10 to-black/50" />
       </div>
 
       <div className="flex flex-col justify-center w-full lg:w-1/2 px-10 md:px-20">
-
         <h1 className="text-3xl font-bold text-gray-900 mb-8 text-center">
           Create Your Account
         </h1>
@@ -108,12 +104,9 @@ const Register = () => {
                 type="button"
                 onClick={() => setShowPass(!showPass)}
                 className="absolute right-3 top-2.5 text-gray-500 hover:text-gray-700"
+                data-testid="toggle-pass"
               >
-                {showPass ? (
-                  <EyeSlashIcon className="w-5 h-5" />
-                ) : (
-                  <EyeIcon className="w-5 h-5" />
-                )}
+                {showPass ? <EyeSlashIcon className="w-5 h-5" /> : <EyeIcon className="w-5 h-5" />}
               </button>
             </div>
           </div>
@@ -134,6 +127,7 @@ const Register = () => {
                 type="button"
                 onClick={() => setShowConfirmPass(!showConfirmPass)}
                 className="absolute right-3 top-2.5 text-gray-500 hover:text-gray-700"
+                data-testid="toggle-confirm"
               >
                 {showConfirmPass ? (
                   <EyeSlashIcon className="w-5 h-5" />
@@ -154,11 +148,10 @@ const Register = () => {
 
           <button
             type="submit"
-            className="w-full bg-black text-white cursor-pointer py-2 rounded-lg text-lg font-medium hover:bg-gray-900 transition"
+            className="w-full bg-black text-white py-2 rounded-lg text-lg font-medium hover:bg-gray-900 transition cursor-pointer"
           >
             Register
           </button>
-
         </form>
 
         <p className="text-center text-sm mt-6 text-gray-700">

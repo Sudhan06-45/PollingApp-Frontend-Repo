@@ -33,7 +33,7 @@ const getBorderColor = (title) => {
   return "border-orange-500";
 };
 
-const timeLeft = (expiresAt) => {
+export const timeLeft = (expiresAt) => {
   const end = new Date(expiresAt);
   const now = new Date();
   const diff = end - now;
